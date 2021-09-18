@@ -15,13 +15,22 @@ $start = 0;
 if (isset($_GET['start'])) {
     $start = $_GET['start'];
 }
-
+?>
+<style>
+    .content {
+        font-weight: bold;
+        color: #0083B8;
+    }
+</style>
+<?php
+echo "<div class='content'>";
 for ($i = 0; $i < $banyak; $i++) {
     if ($i != 0) {
         next_start();
     }
     echo $names[$start] . "<br />";
 }
+echo "</div>";
 
 next_start();
 ?>
